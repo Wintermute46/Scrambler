@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Скремблер</string>
+    <string name="sec_edit">Секретный текст</string>
+    <string name="key_edit">Ключ</string>
+    <string name="crypt_but">Шифровать</string>
+    <string name="crypt_label">Шифр:</string>
+    <string name="decrypt_but">Дешифровать</string>
+    <string name="decrypt_label">Расшифрованный текст</string>
+</resources>

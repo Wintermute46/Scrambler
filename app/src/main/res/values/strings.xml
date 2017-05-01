@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Scrambler</string>
+    <string name="sec_edit">Secret message</string>
+    <string name="key_edit">Key</string>
+    <string name="crypt_but">CRYPT</string>
+    <string name="crypt_label">Crypt text:</string>
+    <string name="decrypt_but">DECRYPT</string>
+    <string name="decrypt_label">Decrypted text</string>
+</resources>
