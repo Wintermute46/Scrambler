@@ -6,5 +6,5 @@
     <string name="crypt_but">Шифровать</string>
     <string name="crypt_label">Шифр:</string>
     <string name="decrypt_but">Дешифровать</string>
-    <string name="decrypt_label">Расшифрованный текст</string>
+    <string name="decrypt_label">Расшифрованный текст:</string>
 </resources>

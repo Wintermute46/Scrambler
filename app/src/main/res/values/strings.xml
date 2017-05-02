@@ -5,5 +5,5 @@
     <string name="crypt_but">CRYPT</string>
     <string name="crypt_label">Crypt text:</string>
     <string name="decrypt_but">DECRYPT</string>
-    <string name="decrypt_label">Decrypted text</string>
+    <string name="decrypt_label">Decrypted text:</string>
 </resources>

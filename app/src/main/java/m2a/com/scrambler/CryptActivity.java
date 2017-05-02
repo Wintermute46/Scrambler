@@ -3,7 +3,9 @@ package m2a.com.scrambler;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -32,17 +34,19 @@ public class CryptActivity extends AppCompatActivity {
         vLabel = (TextView)findViewById(R.id.textView);     //ассоциируем переменную с объектом
         byte[] crypText = vCrypt.getText().toString().getBytes();       //конвертим шифровку в байты
         byte[] key = eKey.getText().toString().getBytes();      //конвертим ключ в байты
-        byte[] decrypText = new byte[crypText.length];      //объявляем выхлоп с длиной
+        byte[] keyBase = Base64.encode(key, Base64.DEFAULT);
+        byte[] decrypTextBase = new byte[crypText.length];      //объявляем выхлоп с длиной
 
         for (int i = 0; i < crypText.length; i++) {         //шагаем по шифровке
 
-            decrypText[i] = (byte)(crypText[i]^key[i%key.length]);      //ксорим то на это
+            decrypTextBase[i] = (byte)(crypText[i]^keyBase[i%keyBase.length]);      //ксорим то на это
 
         }
 
+        byte[] decrypText = Base64.decode(decrypTextBase, Base64.DEFAULT);
+
         vCrypt.setText(new String(decrypText));     //выводим расшифрованый текст
         vLabel.setText(R.string.decrypt_label);
-
 
     }
 }

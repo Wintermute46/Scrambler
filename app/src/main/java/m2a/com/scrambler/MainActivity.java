@@ -28,17 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         if ( (secText.length != 0) & (key.length !=0) ) {
 
-            byte[] secTextBase = Base64.encode(secText, Base64.DEFAULT);
-            //BASE64Encoder enc = new BASE64Encoder();
+            byte[] secTextBase = Base64.encode(secText, Base64.DEFAULT);    //конвертируем текст в Base64
+            byte[] keyBase = Base64.encode(key, Base64.DEFAULT);            //конвертируем ключ в Base64
 
             byte[] crypText = new byte[secTextBase.length];             //шифр и его длина
-            //String secText = eSec.getText().toString();     //взяли то, что введено в секретный текст
-            //String key = eKey.getText().toString();         //взяли ключ
-            //String crypText = "";
 
             for (int i = 0; i < secTextBase.length; i++) {        //идем по секретному тексту
 
-                crypText[i] = (byte) (secTextBase[i] ^ key[i % key.length]);   //ксорим одно с другим
+                crypText[i] = (byte) (secTextBase[i] ^ keyBase[i % keyBase.length]);   //ксорим одно с другим
 
             }
 
