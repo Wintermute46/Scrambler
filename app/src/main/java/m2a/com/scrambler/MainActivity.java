@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);      //давай досвидос!
 
         } else {
-            //TODO: какую-нибудь ругалочку
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.message, Toast.LENGTH_LONG);
+            toast.show();
         }
 
     }

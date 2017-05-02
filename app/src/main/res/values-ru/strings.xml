@@ -7,4 +7,5 @@
     <string name="crypt_label">Шифр:</string>
     <string name="decrypt_but">Дешифровать</string>
     <string name="decrypt_label">Расшифрованный текст:</string>
+    <string name="message">Необходимо заполнить все поля!!!</string>
 </resources>
